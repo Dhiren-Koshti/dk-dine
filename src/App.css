@@ -8,7 +8,8 @@ body {
 }
 
 /* Navbar styles */
-.navbar,.nav-btn {
+.navbar,
+.nav-btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -26,7 +27,8 @@ body {
   overflow: hidden;
 }
 
-.navbar a , .nav-btn a {
+.navbar a,
+.nav-btn a {
   color: #8b0000;
   text-decoration: none;
   padding: 12px 25px;
@@ -36,7 +38,8 @@ body {
   font-weight: bold;
 }
 
-.navbar a:hover, .nav-btn a:hover {
+.navbar a:hover,
+.nav-btn a:hover {
   background-color: rgba(139, 0, 0, 0.1);
   color: #8b0000;
   border-radius: 8px;
@@ -45,8 +48,10 @@ body {
   letter-spacing: 1px;
 }
 
-.navbar a:before, .nav-btn a:before,
-.navbar a:after, .nav-btn a:after {
+.navbar a:before,
+.nav-btn a:before,
+.navbar a:after,
+.nav-btn a:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -56,22 +61,26 @@ body {
   border-radius: 1px;
 }
 
-.navbar a:before, .nav-btn a:before {
+.navbar a:before,
+.nav-btn a:before {
   top: 0;
   left: 0;
   transform: scaleX(0);
   transform-origin: left;
 }
 
-.navbar a:after, .nav-btn a:after {
+.navbar a:after,
+.nav-btn a:after {
   bottom: 0;
   right: 0;
   transform: scaleX(0);
   transform-origin: right;
 }
 
-.navbar a:hover:before, .nav-btn a:hover:before,
-.navbar a:hover:after, .nav-btn a:hover:after {
+.navbar a:hover:before,
+.nav-btn a:hover:before,
+.navbar a:hover:after,
+.nav-btn a:hover:after {
   transform: scaleX(1);
 }
 
@@ -782,7 +791,7 @@ hr {
   transition: 0.3s;
   padding-top: 60px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  border-right: 2px solid rgba(255, 255, 255, 0.8);;
+  border-right: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .sidebar.open {
@@ -808,8 +817,9 @@ hr {
   letter-spacing: 1px;
 }
 
-.sidebar-links a:before, .sidebar-links a:after {
-  content: '';
+.sidebar-links a:before,
+.sidebar-links a:after {
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -832,7 +842,8 @@ hr {
   transform-origin: right;
 }
 
-.sidebar-links a:hover:before, .sidebar-links a:hover:after {
+.sidebar-links a:hover:before,
+.sidebar-links a:hover:after {
   transform: scaleX(1);
 }
 
@@ -852,26 +863,245 @@ hr {
   color: #8b0000;
 }
 
-.nav-btn{
+.nav-btn {
   display: none;
   justify-content: space-between;
 }
 
-
 /* Mobile and Small Screen Adjustments */
 @media (max-width: 768px) {
-  .navbar{
+  .navbar {
     display: none;
   }
 
-  .nav-btn{
+  .nav-btn {
     display: flex;
+    gap: 110px;
   }
 
   .sidebar {
     display: block;
   }
-  
+
+  #menu-icon{
+    margin-left: -3px;
+  }
+
+  .middle-section {
+    height: 50vh; /* Reduce height for mobile screens */
+  }
+
+  .middle-section h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .middle-section p {
+    font-size: 1.2rem; /* Adjust paragraph font size for mobile */
+  }
+
+  .content-overlay {
+    padding: 15px; /* Adjust padding for mobile */
+    max-width: 90%; /* Allow content to take up more space */
+  }
+
+  .offers {
+    padding: 30px 15px; /* Adjust padding for mobile */
+  }
+
+  .offers h1 {
+    font-size: 2rem; /* Adjust title font size */
+  }
+
+  .offers-container {
+    gap: 15px;
+  }
+
+  .offer {
+    max-width: 100%; /* Make the offer card take full width on mobile */
+    height: auto; /* Auto adjust height */
+  }
+
+  .offer-details h2 {
+    font-size: 1.2rem; /* Adjust heading font size for small screens */
+  }
+
+  .offer-details p {
+    font-size: 0.9rem; /* Adjust paragraph font size for small screens */
+  }
+
+  .menu-card {
+    padding: 1rem;
+  }
+
+  .menu-card h1 {
+    font-size: 2rem;
+  }
+
+  .menu-tabs {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .menu-item img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .item-details h2 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .quantity button {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .quantity-value {
+    font-size: 1.1rem;
+  }
+
+  .add-to-cart {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-about h2,
+  .footer-links h2,
+  .footer-contact h2 {
+    font-size: 22px;
+  }
+
+  .footer-about p,
+  .footer-contact p {
+    font-size: 14px;
+  }
+
+  .footer-links ul li a {
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .about-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .feature:last-child {
+    margin-bottom: 0;
+  }
+
+    .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #productCartContainer {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .cards {
+    width: 90%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .cards .productName {
+    font-size: 18px;
+  }
+
+  .cards .productPrice {
+    font-size: 16px;
+  }
+
+  .productQuantity {
+    font-size: 16px;
+  }
+
+  .remove-to-cart-button {
+    font-size: 14px;
+  }
+
+  .productCartTotalElement {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .productCartTotalElement p{
+    font-size: 13px;
+  }
+
+  .productOrderTotal {
+    font-size: 13px;
+  }
+
+  .productFinalTotal {
+    font-size: 13px;
+  }
 }
 
 /* Larger Screens */
@@ -885,898 +1115,311 @@ hr {
   }
 }
 
-@media (max-width: 1200px) {
+/* Tablet screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .middle-section {
+    height: 70vh; /* Adjust height for tablets */
+  }
+
   .middle-section h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Adjust font size for tablets */
   }
 
   .middle-section p {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Adjust paragraph font size for tablets */
+  }
+
+  .content-overlay {
+    padding: 18px; /* Adjust padding for tablets */
+    max-width: 85%; /* Allow content to take up more space */
+  }
+
+  .offers {
+    padding: 35px 20px; /* Adjust padding for tablet */
   }
 
   .offers h1 {
-    font-size: 2rem;
+    font-size: 2.2rem; /* Adjust title font size */
+  }
+
+  .offers-container {
+    gap: 18px;
   }
 
   .offer {
-    max-width: 250px;
+    max-width: 45%; /* Allow offer cards to take up less space */
     height: 350px;
   }
 
-  .offer img {
-    height: 150px;
-  }
-
   .offer-details h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Adjust heading font size */
   }
 
   .offer-details p {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  .menu-card {
+    padding: 1.5rem;
   }
 
   .menu-card h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .menu-tabs {
+    gap: 1rem;
   }
 
   .tab-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
-
-  .menu-item img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .item-details h2 {
-    font-size: 1.2rem;
-  }
-
-  .price {
-    font-size: 1rem;
-  }
-
-  .add-to-cart {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-
-  .footer-about h2,
-  .footer-links h2,
-  .footer-contact h2 {
-    font-size: 20px;
-  }
-
-  .footer-about p,
-  .footer-links ul li a,
-  .footer-contact p {
-    font-size: 14px;
-  }
-
-  .social-icons a {
-    font-size: 18px;
-  }
-
-  .footer-bottom p {
-    font-size: 12px;
-  }
-
-  .about-content h1 {
-    font-size: 2rem;
-  }
-
-  .about-content p {
-    font-size: 1rem;
-  }
-
-  .feature h3 {
-    font-size: 1.2rem;
-  }
-
-  .feature p {
-    font-size: 0.9rem;
-  }
-
-  .cards {
-    max-width: 250px;
-  }
-
-  .cards .productName {
-    font-size: 18px;
-  }
-
-  .cards .productPrice {
-    font-size: 16px;
-  }
-
-  .stockElement button {
-    font-size: 16px;
-  }
-
-  .productQuantity {
-    font-size: 16px;
-  }
-
-  .remove-to-cart-button {
-    font-size: 14px;
-  }
-
-  .productCartTotalElement p {
-    font-size: 16px;
-  }
-
-  .productFinalTotal {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 992px) {
-  .navbar a,
-  .nav-btn a {
-    padding: 10px 15px;
-    font-size: 18px;
-  }
-
-  .middle-section h1 {
-    font-size: 2rem;
-  }
-
-  .middle-section p {
-    font-size: 1rem;
-  }
-
-  .offers h1 {
-    font-size: 1.8rem;
-  }
-
-  .offer {
-    max-width: 200px;
-    height: 300px;
-  }
-
-  .offer img {
-    height: 120px;
-  }
-
-  .offer-details h2 {
-    font-size: 1rem;
-  }
-
-  .offer-details p {
-    font-size: 0.8rem;
-  }
-
-  .menu-card h1 {
-    font-size: 1.8rem;
-  }
-
-  .tab-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-
-  .menu-item img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .item-details h2 {
-    font-size: 1rem;
-  }
-
-  .price {
-    font-size: 0.9rem;
-  }
-
-  .add-to-cart {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .footer-about h2,
-  .footer-links h2,
-  .footer-contact h2 {
-    font-size: 18px;
-  }
-
-  .footer-about p,
-  .footer-links ul li a,
-  .footer-contact p {
-    font-size: 12px;
-  }
-
-  .social-icons a {
-    font-size: 16px;
-  }
-
-  .footer-bottom p {
-    font-size: 10px;
-  }
-
-  .about-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .about-content p {
-    font-size: 0.9rem;
-  }
-
-  .feature h3 {
-    font-size: 1rem;
-  }
-
-  .feature p {
-    font-size: 0.8rem;
-  }
-
-  .cards {
-    max-width: 200px;
-  }
-
-  .cards .productName {
-    font-size: 16px;
-  }
-
-  .cards .productPrice {
-    font-size: 14px;
-  }
-
-  .stockElement button {
-    font-size: 14px;
-  }
-
-  .productQuantity {
-    font-size: 14px;
-  }
-
-  .remove-to-cart-button {
-    font-size: 12px;
-  }
-
-  .productCartTotalElement p {
-    font-size: 14px;
-  }
-
-  .productFinalTotal {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    display: none;
-  }
-
-  .nav-btn {
-    display: flex;
-  }
-
-  .sidebar {
-    display: block;
-  }
-
-  .middle-section h1 {
-    font-size: 1.8rem;
-  }
-
-  .middle-section p {
-    font-size: 0.9rem;
-  }
-
-  .offers h1 {
-    font-size: 1.5rem;
-  }
-
-  .offer {
-    max-width: 150px;
-    height: 250px;
-  }
-
-  .offer img {
-    height: 100px;
-  }
-
-  .offer-details h2 {
-    font-size: 0.9rem;
-  }
-
-  .offer-details p {
-    font-size: 0.7rem;
-  }
-
-  .menu-card h1 {
-    font-size: 1.5rem;
-  }
-
-  .tab-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
-
-  .menu-item img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .item-details h2 {
-    font-size: 0.9rem;
-  }
-
-  .price {
-    font-size: 0.8rem;
-  }
-
-  .add-to-cart {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
-  }
-
-  .footer-about h2,
-  .footer-links h2,
-  .footer-contact h2 {
-    font-size: 16px;
-  }
-
-  .footer-about p,
-  .footer-links ul li a,
-  .footer-contact p {
-    font-size: 10px;
-  }
-
-  .social-icons a {
-    font-size: 14px;
-  }
-
-  .footer-bottom p {
-    font-size: 8px;
-  }
-
-  .about-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .about-content p {
-    font-size: 0.8rem;
-  }
-
-  .feature h3 {
-    font-size: 0.9rem;
-  }
-
-  .feature p {
-    font-size: 0.7rem;
-  }
-
-  .cards {
-    max-width: 150px;
-  }
-
-  .cards .productName {
-    font-size: 14px;
-  }
-
-  .cards .productPrice {
-    font-size: 12px;
-  }
-
-  .stockElement button {
-    font-size: 12px;
-  }
-
-  .productQuantity {
-    font-size: 12px;
-  }
-
-  .remove-to-cart-button {
-    font-size: 10px;
-  }
-
-  .productCartTotalElement p {
-    font-size: 12px;
-  }
-
-  .productFinalTotal {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 576px) {
-  .cart-icon{
-    width: 26px;
-    margin-right: 5px;
-  }
-
-  .cart-count{
-    font-size: 14px;
-    padding: 5px 9px;
-  }
-
-  .middle-section h1 {
-    font-size: 1.5rem;
-  }
-
-  .middle-section p {
-    font-size: 0.8rem;
-  }
-
-  .offers h1 {
-    font-size: 1.2rem;
-  }
-
-  .offer {
-    max-width: 120px;
-    height: 200px;
-  }
-
-  .offer img {
-    height: 80px;
-  }
-
-  .offer-details h2 {
-    font-size: 0.8rem;
-  }
-
-  .offer-details p {
-    font-size: 0.6rem;
-  }
-
-  .menu-card h1 {
-    font-size: 1.2rem;
-  }
-
-  .tab-button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.7rem;
-  }
-
-  .menu-item img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .item-details h2 {
-    font-size: 0.8rem;
-  }
-
-  .price {
-    font-size: 0.7rem;
-  }
-
-  .description{
-    font-size: 0.9rem;
-  }
-
-  .add-to-cart {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.7rem;
-  }
-
-  .footer-about h2,
-  .footer-links h2,
-  .footer-contact h2 {
-    font-size: 14px;
-  }
-
-  .footer-about p,
-  .footer-links ul li a,
-  .footer-contact p {
-    font-size: 8px;
-  }
-
-  .social-icons a {
-    font-size: 12px;
-  }
-
-  .footer-bottom p {
-    font-size: 6px;
-  }
-
-  .about-content h1 {
-    font-size: 1.2rem;
-  }
-
-  .about-content p {
-    font-size: 0.7rem;
-  }
-
-  .feature h3 {
-    font-size: 0.8rem;
-  }
-
-  .feature p {
-    font-size: 0.6rem;
-  }
-
-  .cards {
-    max-width: 120px;
-  }
-
-  .cards .productName {
-    font-size: 12px;
-  }
-
-  .cards .productPrice {
-    font-size: 10px;
-  }
-
-  .stockElement button {
-    font-size: 10px;
-  }
-
-  .productQuantity {
-    font-size: 10px;
-  }
-
-  .remove-to-cart-button {
-    font-size: 8px;
-  }
-
-  .productCartTotalElement p {
-    font-size: 10px;
-  }
-
-  .productFinalTotal {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 468px) {
-  /* Navbar and Sidebar Adjustments */
-  .nav-btn a {
-    padding: 8px 10px;
-    font-size: 16px;
-  }
-
-  .sidebar.open {
-    width: 200px; /* Reduce sidebar width for very small screens */
-  }
-
-  .sidebar-links a {
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  .closebtn i {
-    font-size: 25px;
-  }
-
-  /* Hero Section Adjustments */
-  .middle-section h1 {
-    font-size: 1.2rem;
-  }
-
-  .middle-section p {
-    font-size: 0.7rem;
-  }
-
-  .content-overlay {
-    padding: 10px;
-    max-width: 90%;
-  }
-
-  /* Offers Section Adjustments */
-  .offers h1 {
-    font-size: 1rem;
-  }
-
-  .offer {
-    max-width: 100px;
-    height: 180px;
-  }
-
-  .offer img {
-    height: 60px;
-  }
-
-  .offer-details h2 {
-    font-size: 0.7rem;
-  }
-
-  .offer-details p {
-    font-size: 0.6rem;
-  }
-
-  /* Menu Card Adjustments */
-  .menu-card h1 {
-    font-size: 1rem;
-  }
-
-  .tab-button {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.6rem;
-    margin: 0 0.3rem;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.8rem;
   }
 
   .menu-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    padding: 1rem;
   }
 
   .menu-item img {
-    width: 80px;
-    height: 80px;
-    margin-right: 0;
-    margin-bottom: 10px;
+    width: 130px;
+    height: 130px;
   }
 
   .item-details h2 {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
   }
 
   .price {
-    font-size: 0.7rem;
+    font-size: 1.1rem;
   }
 
-  .add-to-cart {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.6rem;
-  }
-
-  /* Footer Adjustments */
-  .footer-about h2,
-  .footer-links h2,
-  .footer-contact h2 {
-    font-size: 12px;
-  }
-
-  .footer-about p,
-  .footer-links ul li a,
-  .footer-contact p {
-    font-size: 8px;
-  }
-
-  .social-icons a {
-    font-size: 12px;
-  }
-
-  .footer-bottom p {
-    font-size: 6px;
-  }
-
-  /* About Us Section Adjustments */
-  .about-content h1 {
-    font-size: 1rem;
-  }
-
-  .about-content p {
-    font-size: 0.6rem;
-  }
-
-  .feature h3 {
-    font-size: 0.7rem;
-  }
-
-  .feature p {
-    font-size: 0.6rem;
-  }
-
-  /* Cart Section Adjustments */
-  .cards {
-    max-width: 100px;
-    padding: 10px;
-  }
-
-  .cards .productName {
-    font-size: 10px;
-  }
-
-  .cards .productPrice {
-    font-size: 9px;
-  }
-
-  .stockElement button {
-    font-size: 9px;
-    padding: 6px 10px;
-  }
-
-  .productQuantity {
-    font-size: 9px;
-  }
-
-  .remove-to-cart-button {
-    font-size: 8px;
-    padding: 8px;
-  }
-
-  .productCartTotalElement p {
-    font-size: 9px;
-  }
-
-  .productFinalTotal {
-    font-size: 10px;
-  }
-
-  /* Quantity and Add to Cart Buttons */
   .quantity button {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.6rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
   }
 
   .quantity-value {
-    font-size: 0.7rem;
+    font-size: 1.2rem;
   }
 
   .add-to-cart {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.6rem;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1 1 48%;
+    margin-bottom: 20px;
+  }
+
+  .footer-about h2,
+  .footer-links h2,
+  .footer-contact h2 {
+    font-size: 22px;
+  }
+
+  .footer-about p,
+  .footer-contact p {
+    font-size: 15px;
+  }
+
+  .footer-links ul li a {
+    font-size: 15px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+  }
+
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-image {
+    flex: 1 1 50%;
+  }
+
+  .about-content {
+    flex: 1 1 50%;
+    padding: 30px;
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+  }
+
+  .about-features {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .feature {
+    flex: 1 1 45%;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #productCartContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .cards {
+    width: 48%;
+    max-width: 48%;
+  }
+
+  .productCartTotalElement {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .productOrderTotal {
+    font-size: 18px;
+  }
+
+  .productFinalTotal {
+    font-size: 20px;
   }
 }
 
-@media (min-width: 250px) and (max-width: 383px) {
-  /* Navbar and Sidebar Adjustments */
-  .nav-btn a {
-    padding: 6px 8px;
-    font-size: 14px;
+/* Desktop and larger screens */
+@media (min-width: 1025px) {
+  .middle-section {
+    height: 100vh; /* Full height for larger screens */
   }
 
-  .sidebar.open {
-    width: 180px; /* Further reduce sidebar width */
-  }
-
-  .sidebar-links a {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .closebtn i {
-    font-size: 20px;
-  }
-
-  /* Hero Section Adjustments */
   .middle-section h1 {
-    font-size: 1rem;
+    font-size: 3rem; /* Font size for larger screens */
   }
 
   .middle-section p {
-    font-size: 0.6rem;
+    font-size: 1.5rem; /* Font size for larger screens */
   }
 
   .content-overlay {
-    padding: 8px;
-    max-width: 95%;
+    padding: 20px; /* Adjust padding for desktop */
+    max-width: 80%; /* Keep content centered and within limits */
   }
 
-  /* Offers Section Adjustments */
+  .offers {
+    padding: 40px 20px;
+  }
+
   .offers h1 {
-    font-size: 0.9rem;
+    font-size: 2.5rem; /* Title font size */
+  }
+
+  .offers-container {
+    gap: 20px;
   }
 
   .offer {
-    max-width: 90px;
-    height: 160px;
-  }
-
-  .offer img {
-    height: 50px;
+    max-width: 300px; /* Offer cards at fixed width */
+    height: 400px;
   }
 
   .offer-details h2 {
-    font-size: 0.6rem;
+    font-size: 1.5rem; /* Heading font size */
   }
 
   .offer-details p {
-    font-size: 0.5rem;
+    font-size: 1rem; /* Paragraph font size */
   }
 
-  /* Menu Card Adjustments */
+  .menu-card {
+    padding: 2rem;
+  }
+
   .menu-card h1 {
-    font-size: 0.9rem;
+    font-size: 2.5rem;
+  }
+
+  .menu-tabs {
+    gap: 2rem;
   }
 
   .tab-button {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.5rem;
-    margin: 0 0.2rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
+  .menu-item {
+    flex-direction: row;
+    padding: 1rem;
   }
 
   .menu-item img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 8px;
+    width: 150px;
+    height: 150px;
   }
 
   .item-details h2 {
-    font-size: 0.7rem;
+    font-size: 1.5rem;
   }
 
   .price {
-    font-size: 0.6rem;
+    font-size: 1.2rem;
   }
 
-  .add-to-cart {
-    padding: 0.2rem 0.3rem;
-    font-size: 0.5rem;
-  }
-
-  /* Footer Adjustments */
-  .footer-about h2,
-  .footer-links h2,
-  .footer-contact h2 {
-    font-size: 10px;
-  }
-
-  .footer-about p,
-  .footer-links ul li a,
-  .footer-contact p {
-    font-size: 7px;
-  }
-
-  .social-icons a {
-    font-size: 10px;
-  }
-
-  .footer-bottom p {
-    font-size: 5px;
-  }
-
-  /* About Us Section Adjustments */
-  .about-content h1 {
-    font-size: 0.9rem;
-  }
-
-  .about-content p {
-    font-size: 0.5rem;
-  }
-
-  .feature h3 {
-    font-size: 0.6rem;
-  }
-
-  .feature p {
-    font-size: 0.5rem;
-  }
-
-  /* Cart Section Adjustments */
-  .cards {
-    max-width: 90px;
-    padding: 6px;
-  }
-
-  .cards .productName {
-    font-size: 8px;
-  }
-
-  .cards .productPrice {
-    font-size: 7px;
-  }
-
-  .stockElement button {
-    font-size: 7px;
-    padding: 5px 8px;
-  }
-
-  .productQuantity {
-    font-size: 7px;
-  }
-
-  .remove-to-cart-button {
-    font-size: 7px;
-    padding: 6px;
-  }
-
-  .productCartTotalElement p {
-    font-size: 7px;
-  }
-
-  .productFinalTotal {
-    font-size: 8px;
-  }
-
-  /* Quantity and Add to Cart Buttons */
   .quantity button {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.5rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
   }
 
   .quantity-value {
-    font-size: 0.6rem;
+    font-size: 1.2rem;
   }
 
   .add-to-cart {
-    padding: 0.2rem 0.3rem;
-    font-size: 0.5rem;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1 1 30%;
+    margin-bottom: 30px;
+  }
+
+  .footer-about h2,
+  .footer-links h2,
+  .footer-contact h2 {
+    font-size: 24px;
+  }
+
+  .footer-about p,
+  .footer-contact p {
+    font-size: 16px;
+  }
+
+  .footer-links ul li a {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
   }
 }
-

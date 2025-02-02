@@ -63,7 +63,7 @@ export default function Navbar() {
         >
           <i className="bi bi-list" id="menu-icon"></i>
         </button>
-        <Link to="/myCart" id="cart" className="cart-link" style={{marginRight:'-10px'}}>
+        <Link to="/myCart" id="cart" className="cart-link" >
           <img
             src="https://cdn-icons-png.freepik.com/256/405/405996.png?semt=ais_hybrid"
             alt="Cart Icon"
