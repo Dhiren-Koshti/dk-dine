@@ -53,15 +53,17 @@ export function bill() {
   let data = JSON.parse(localStorage.getItem("foodLS"));
   let subTotal = 0;
 
-  for (let currEle of data) {
-    subTotal += currEle.price;
-  }
+  if (data) {
+    for (let currEle of data) {
+      subTotal += currEle.price;
+    }
 
-  document.querySelector(".productSubTotal").innerText = subTotal;
-  document.querySelector(".productFinalTotal").innerText = subTotal + 50;
+    document.querySelector(".productSubTotal").innerText = subTotal;
+    document.querySelector(".productFinalTotal").innerText = subTotal + 50;
 
-  if (subTotal === 0) {
-    document.querySelector(".productFinalTotal").innerText = 0;
+    if (subTotal === 0) {
+      document.querySelector(".productFinalTotal").innerText = 0;
+    }
   }
 }
 

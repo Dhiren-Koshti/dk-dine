@@ -57,7 +57,7 @@ export default function Cart() {
 
   useEffect(() => {
     bill();
-  }, []);
+  },  [lsArr]);
 
   return (
     <section className="addToCartElement">
