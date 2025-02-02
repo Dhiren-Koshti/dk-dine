@@ -785,7 +785,6 @@ hr {
   position: fixed;
   z-index: 1000;
   top: 0;
-  left: 0;
   background-color: rgba(255, 255, 255, 0.966);
   overflow-x: hidden;
   transition: 0.3s;
@@ -881,6 +880,11 @@ hr {
 
   .sidebar {
     display: block;
+    left: -10px;
+  }
+
+  .sidebar-links a {
+    padding-left: 25px;
   }
 
   #menu-icon{
